@@ -69,10 +69,12 @@
           [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
      }
   
-<h2>Push With StoryBoardID</h2>
+<h2>Push & Pop With StoryBoardID</h2>
 
-    BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
-    
-    [self.navigationController pushViewController:push animated:YES];
+     //Push
+     BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
+     [self.navigationController pushViewController:push animated:YES];
+     
+     //Pop
+     [self.navigationController popViewControllerAnimated:YES];
 
-  
