@@ -1,21 +1,15 @@
 <h2>App Transport Securit</h2>
 
      <key>NSAppTransportSecurity</key>
-
         <dict>
-
            <key>NSAllowsArbitraryLoads</key>
-
            <true/>
-
         </dict>
 
 <h2>NSUserDefault</h2>
 
       NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                     
       [defaults setObject:[@"Jabir" forKey:@"strVanue"];
-                     
       [defaults synchronize];
                       
       NSLog(@"strVanue : %@",[defaults valueForKey:@"strVanue"]);
@@ -72,9 +66,11 @@
 <h2>Push & Pop With StoryBoardID</h2>
 
      //Push
+     
      BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
      [self.navigationController pushViewController:push animated:YES];
      
      //Pop
+     
      [self.navigationController popViewControllerAnimated:YES];
 
