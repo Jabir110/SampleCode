@@ -12,11 +12,14 @@
 
 <h2>NSUserDefault</h2>
 
-      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-      [defaults setObject:[@"Jabir" forKey:@"strVanue"];
-      [defaults synchronize];
-                      
-      NSLog(@"strVanue : %@",[defaults valueForKey:@"strVanue"]);
+     #import <UIKit/UIKit.h>
+     @interface ViewController : UIViewController
+     @end
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+     [defaults setObject:[@"Jabir" forKey:@"strVanue"];
+     [defaults synchronize];
+     
+     NSLog(@"strVanue : %@",[defaults valueForKey:@"strVanue"]);
 
 <h2>AlertView</h2>
 
