@@ -108,7 +108,7 @@
      
 <h2>pop & Back Button DataPass (StoryBoardID)</h2>
      
-     We can use a delegate to pass the data back to previous Controller. So if You are  in your NextViewController  and you need to pass the data to VieController than  you need to create a protocol that sends data back to your ViewController. Your ViewController  would become a delegate of NextViewController.
+   We can use a delegate to pass the data back to previous Controller.So if You are in your NextViewController and you need to pass the data to VieController than you need to create a protocol that sends data back to your ViewController.Your ViewController  would become a delegate of NextViewController.
 
 
      
