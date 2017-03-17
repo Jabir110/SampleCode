@@ -253,6 +253,8 @@ NSLog(@"EndDate: %@",EndDate);
 List of All date between Two Dates
 
 ```objc
+
+NSMutableArray *result = [NSMutableArray array];
 NSDate *StartDate = [NSDate date];
 NSCalendar *cal = [NSCalendar currentCalendar];
 
@@ -267,8 +269,9 @@ NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
 for (int i = 0 ; i < 15; i ++)
 {
     NSString *strDate = [dateFormatter stringFromDate:date];    
-    NSLog(@"strDate: %@",strDate);
+    [result addObject:strDate];
     [comps setDay:(comps.day + 1)];
     date = [cal dateFromComponents:comps];
 }
+NSLog(@"Result: %@",result);
 ```
