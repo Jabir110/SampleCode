@@ -29,34 +29,26 @@
 
 <h2>AlertView</h2>
 
-```objectivec
+```objc
+- (void)viewDidLoad 
+{     
+    UIAlertView *alert =  [[UIAlertView alloc]initWithTitle:@"Title" message:@"Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    alert.tag = 101;
+    [alert show];
+}
 
-     #import "ViewController.h"
-     @interface ViewController ()
-     @end
-     
-     @implementation ViewController
-     
-     - (void)viewDidLoad 
-     {     
-          UIAlertView *alert =  [[UIAlertView alloc]initWithTitle:@"Title" message:@"Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-          alert.tag = 101;
-          [alert show];
-     }
-     
-     - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-     {
-          if (alertView.tag == 101)
-          {
-               if (buttonIndex == 0)
-               {
-                    txtConfirmPass.text = @"";
-                    txtNewPass.text = @"";
-                    txtCurrentPass.text = @"";
-               }
-          }
-     }
-     
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 101)
+    {
+        if (buttonIndex == 0)
+        {
+            txtConfirmPass.text = @"";
+            txtNewPass.text = @"";
+            txtCurrentPass.text = @"";
+        }
+    }
+}    
 ```
 
 <h2>TextField Validation</h2>
