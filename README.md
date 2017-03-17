@@ -27,7 +27,10 @@
           [defaults synchronize];
      }
 ```
+
 <h2>AlertView</h2>
+
+```objective-c
 
      #import "ViewController.h"
      @interface ViewController ()
@@ -54,7 +57,7 @@
                }
           }
      }
-     
+```
 <h2>TextField Validation</h2>
 
      #import "ViewController.h"
