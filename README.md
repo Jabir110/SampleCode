@@ -110,5 +110,11 @@
      
    We can use a delegate to pass the data back to previous Controller.So if You are in your NextViewController and you need to pass the data to VieController than you need to create a protocol that sends data back to your ViewController.Your ViewController  would become a delegate of NextViewController.
 
+Steps:
+
+1. Create a new Xcode Project for (Single View Application).
+2. Give Project a name ( Lets say ProtocolDemo).
+3. Click next button and the Project will be created.
+4. Now go to Your StoryBoard , Click on the View Controller. Then Click on the Xcode options”Editor” and then embed a navigation Controller.  Take a label and a button on the ViewController and make proper connections. Your ViewController.h and ViewController.m will look something like this
 
      
