@@ -1,15 +1,12 @@
 <h2>App Transport Securit</h2>
 
-```objective-c
-          <key>NSAppTransportSecurity</key>
-          <dict>
-               <key>NSAllowsArbitraryLoads</key>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+          <key>NSAllowsArbitraryLoads</key>
           <true/>
-          </dict>
-```
-<h2>NSUserDefault</h2>
+    </dict>
 
-```objective-c
+<h2>NSUserDefault</h2>
 
      #import "ViewController.h"
      @interface ViewController ()
@@ -25,11 +22,8 @@
           [defaults setObject:@"Jabir" forKey:@"strVanue"];
           [defaults synchronize];
      }
-```
 
 <h2>AlertView</h2>
-
-```objective-c
 
      #import "ViewController.h"
      @interface ViewController ()
@@ -56,7 +50,7 @@
                }
           }
      }
-```
+
 <h2>TextField Validation</h2>
 
      #import "ViewController.h"
