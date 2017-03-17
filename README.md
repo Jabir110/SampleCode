@@ -1,5 +1,9 @@
 <h2>App Transport Securit</h2>
 
+     #import <UIKit/UIKit.h>
+     @interface ViewController : UIViewController
+     @end
+     
      <key>NSAppTransportSecurity</key>
         <dict>
            <key>NSAllowsArbitraryLoads</key>
