@@ -155,7 +155,7 @@
      
 <h2>pop & Back Button DataPass (StoryBoardID)</h2>
 
-[Sites Example Link](https://iostpoint.wordpress.com/2016/06/25/pass-data-back-to-previous-viewcontroller/)
+[Example Link](https://iostpoint.wordpress.com/2016/06/25/pass-data-back-to-previous-viewcontroller/)
 
 ViewController.h
 
