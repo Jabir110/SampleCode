@@ -1,8 +1,10 @@
 <h2>App Transport Securit</h2>
 
-     #import <UIKit/UIKit.h>
-     @interface ViewController : UIViewController
+     #import "ViewController.h"
+     @interface ViewController ()
      @end
+
+     @implementation ViewController
      
      <key>NSAppTransportSecurity</key>
         <dict>
