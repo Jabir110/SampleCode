@@ -30,14 +30,16 @@
 <h2>AlertView</h2>
 
      #import <UIKit/UIKit.h>
-
-     //Declare
+     @interface ViewController : UIViewController
+     @end
      
-     UIAlertView *alert =  [[UIAlertView alloc]initWithTitle:@"Title" message:@"Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-     alert.tag = 101;
-     [alert show];
+     – (void)viewDidLoad 
+     {     
+          UIAlertView *alert =  [[UIAlertView alloc]initWithTitle:@"Title" message:@"Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+          alert.tag = 101;
+          [alert show];
+     }
      
-     //Index Method
      - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
      {
           if (alertView.tag == 101)
