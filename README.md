@@ -172,6 +172,7 @@ ViewController.m
      #import "ViewController.h"
      #import "SecondViewController.h"
      @interface ViewController ()
+     
      @end
 
      @implementation ViewController
@@ -195,10 +196,12 @@ SecondViewController.h
 
      @protocol sendDataBack <NSObject>
      -(void)sendDataToPreviousController: (NSString *)string;
+     
      @end
 
      @interface SecondViewController : UIViewController
      @property (assign,nonatomic) id delegate;
+     
      @end
      
 SecondViewController.m
@@ -207,6 +210,7 @@ SecondViewController.m
 
      @interface SecondViewController ()<UITextFieldDelegate>
      @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+     
      @end
 
      @implementation SecondViewController
