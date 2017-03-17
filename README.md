@@ -14,9 +14,11 @@
 
 <h2>NSUserDefault</h2>
 
-     #import <UIKit/UIKit.h>
-     @interface ViewController : UIViewController
+     #import "ViewController.h"
+     @interface ViewController ()
      @end
+     
+     @implementation ViewController
      
      - (void)viewDidLoad
      {
