@@ -16,16 +16,15 @@
      @interface ViewController : UIViewController
      @end
      
-     – (void)viewDidLoad 
+     - (void)viewDidLoad
      {
           [super viewDidLoad];
-          
+    
           NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-          [defaults setObject:[@"Jabir" forKey:@"strVanue"];
+          [defaults setObject:@"Jabir" forKey:@"strVanue"];
           [defaults synchronize];
-          
-          NSLog(@"strVanue : %@",[defaults valueForKey:@"strVanue"]);
      }
+
 
 <h2>AlertView</h2>
 
