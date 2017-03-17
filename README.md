@@ -10,7 +10,7 @@
 ```
 <h2>NSUserDefault</h2>
 
-```objectivec
+```objc
 #import "ViewController.h"
 @interface ViewController ()
 @end
