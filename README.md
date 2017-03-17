@@ -12,20 +12,21 @@
 
 ```objective-c
 
-     #import "ViewController.h"
-     @interface ViewController ()
-     @end
-     
-     @implementation ViewController
-     
-     - (void)viewDidLoad
-     {
-          [super viewDidLoad];
+#import "ViewController.h"
+@interface ViewController ()
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
-          NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-          [defaults setObject:@"Jabir" forKey:@"strVanue"];
-          [defaults synchronize];
-     }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"Jabir" forKey:@"strVanue"];
+    [defaults synchronize];
+}
+     
 ```
 
 <h2>AlertView</h2>
