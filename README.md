@@ -1,5 +1,7 @@
 <h2>App Transport Securit</h2>
 
+```javascript
+
      <key>NSAppTransportSecurity</key>
         <dict>
            <key>NSAllowsArbitraryLoads</key>
