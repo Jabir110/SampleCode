@@ -250,7 +250,7 @@ NSLog(@"StartDate: %@",StartDate);
 NSLog(@"EndDate: %@",EndDate);
 ```
 
-List of All date between Two Dates
+List of All dates between Two Dates
 
 ```objc
 NSMutableArray *result = [NSMutableArray array];
