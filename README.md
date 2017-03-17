@@ -90,6 +90,7 @@
 <h2>Push & Pop With StoryBoardID</h2>
      
      #import "ViewController.h"
+     #import "SecondViewController.h"
      @interface ViewController ()
      @end
      
@@ -97,7 +98,7 @@
 
      - (IBAction)ActionPushButton:(id)sender
      {
-          BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
+          SecondViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
           [self.navigationController pushViewController:push animated:YES];
      }
      
