@@ -91,15 +91,15 @@
     
 <h2>Push With Segue (tableView)</h2>
 
-     -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-     {
-          if ([segue.identifier isEqualToString:@"pushSecond"]) 
+          -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
           {
-               NSIndexPath *indexpath=[tblView indexPathForSelectedRow];
-               secondVc *ViewSecond=segue.destinationViewController;
-               ViewSecond.strData=[NSString stringWithFormat:@"%@",[arr objectAtIndex:indexpath.row]];
+               if ([segue.identifier isEqualToString:@"pushSecond"]) 
+               {
+                    NSIndexPath *indexpath=[tblView indexPathForSelectedRow];
+                    secondVc *ViewSecond=segue.destinationViewController;
+                    ViewSecond.strData=[NSString stringWithFormat:@"%@",[arr objectAtIndex:indexpath.row]];
+               }
           }
-     }
      
      -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
      {
@@ -122,5 +122,14 @@ Steps:
           @property (weak, nonatomic) IBOutlet UILabel *outputLabel;
           @end
 
+          -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+          {
+               if ([segue.identifier isEqualToString:@"pushSecond"]) 
+               {
+                    NSIndexPath *indexpath=[tblView indexPathForSelectedRow];
+                    secondVc *ViewSecond=segue.destinationViewController;
+                    ViewSecond.strData=[NSString stringWithFormat:@"%@",[arr objectAtIndex:indexpath.row]];
+               }
+          }
 
      
