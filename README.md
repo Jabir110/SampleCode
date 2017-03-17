@@ -53,41 +53,66 @@
      }
      
 <h2>TextField Validation</h2>
-     
-     NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
-    
-     if(txtMobile.text.length == 0)
-     {
-          [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter Name" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-     }
-     else if(txtMobile.text.length < 10)
-     {
-          [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Phone Number" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-     }
-     else if(txtMobile.text.length > 10)
-     {
-          [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Phone Number" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-     }
-     else if(txtEmail.text.length == 0)
-     {
-          [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter Email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-     }
-     else if([emailTest evaluateWithObject:txtEmail.text] == NO)
-     {
-          [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-     }
-  
-<h2>Push & Pop With StoryBoardID</h2>
 
-     //Push
-     BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
-     [self.navigationController pushViewController:push animated:YES];
+     #import "ViewController.h"
+     @interface ViewController ()
+     @end
      
-     //Pop
-     [self.navigationController popViewControllerAnimated:YES];
+     @implementation ViewController
+     
+     - (IBAction)ActionButton:(id)sender
+     {
+          NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+          NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
+          
+          if(txtMobile.text.length == 0)
+          {
+               [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter Name" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+          }
+          else if(txtMobile.text.length < 10)
+          {
+               [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Phone Number" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+          }
+          else if(txtMobile.text.length > 10)
+          {
+               [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Phone Number" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+          }
+          else if(txtEmail.text.length == 0)
+          {
+               [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter Email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+          }
+          else if([emailTest evaluateWithObject:txtEmail.text] == NO)
+          {
+               [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Enter valid Email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+          }
+      }
+          
+<h2>Push & Pop With StoryBoardID</h2>
+     
+     #import "ViewController.h"
+     @interface ViewController ()
+     @end
+     
+     @implementation ViewController
+
+     - (IBAction)ActionPushButton:(id)sender
+     {
+          BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
+          [self.navigationController pushViewController:push animated:YES];
+     }
+     
+     - (IBAction)ActionBackButton:(id)sender
+     {
+          [self.navigationController popViewControllerAnimated:YES];
+     }
 
 <h2>Push With Segue</h2>
+
+     #import "ViewController.h"
+     @interface ViewController ()
+     @end
+     
+     @implementation ViewController
 
      - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
      {
@@ -106,15 +131,21 @@
     
 <h2>Push With Segue (tableView)</h2>
 
-          -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+     #import "ViewController.h"
+     @interface ViewController ()
+     @end
+     
+     @implementation ViewController
+     
+     -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+     {
+          if ([segue.identifier isEqualToString:@"pushSecond"]) 
           {
-               if ([segue.identifier isEqualToString:@"pushSecond"]) 
-               {
-                    NSIndexPath *indexpath=[tblView indexPathForSelectedRow];
-                    secondVc *ViewSecond=segue.destinationViewController;
-                    ViewSecond.strData=[NSString stringWithFormat:@"%@",[arr objectAtIndex:indexpath.row]];
-               }
+               NSIndexPath *indexpath=[tblView indexPathForSelectedRow];
+               secondVc *ViewSecond=segue.destinationViewController;
+               ViewSecond.strData=[NSString stringWithFormat:@"%@",[arr objectAtIndex:indexpath.row]];
           }
+     }
      
      -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
      {
