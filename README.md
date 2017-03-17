@@ -233,5 +233,17 @@ NSLog(@"strDate: %@",strDate);
 NSDate *ConvertDate = [dateFormatter dateFromString:strDate];
 NSLog(@"ConvertDate: %@",ConvertDate);
 ```
-  
-  
+
+<h2>Date Get (Todays to After 15 Days)</h2>
+
+```objc
+NSDate *StartDate = [NSDate date];
+
+NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+[dateComponents setDay:15];
+
+NSDate *EndDate = [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:StartDate options:0];
+
+NSLog(@"StartDate: %@",StartDate);
+NSLog(@"EndDate: %@",EndDate);
+```
