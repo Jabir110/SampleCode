@@ -195,7 +195,7 @@ SecondViewController.m
 }
 ```
 
-<h2>Pop & Back Button DataPass (StoryBoardID)</h2>
+<h2>CollectionView Width SET</h2>
 
 ```objc
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
