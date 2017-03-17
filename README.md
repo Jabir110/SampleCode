@@ -129,8 +129,8 @@ ViewController.h
 
 ```objc
 #import <UIKit/UIKit.h>
+
 @interface ViewController : UIViewController
-     
 @property (weak, nonatomic) IBOutlet UILabel *outputLabel;
 - (IBAction)ActionNext:(id)sender;
 
@@ -142,8 +142,8 @@ ViewController.m
 ```objc
 #import "ViewController.h"
 #import "SecondViewController.h"
-@interface ViewController ()
 
+@interface ViewController ()
 @end
 
 @implementation ViewController
