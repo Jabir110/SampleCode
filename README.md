@@ -33,7 +33,7 @@
      @interface ViewController : UIViewController
      @end
      
-     – (void)viewDidLoad 
+     - (void)viewDidLoad 
      {     
           UIAlertView *alert =  [[UIAlertView alloc]initWithTitle:@"Title" message:@"Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
           alert.tag = 101;
