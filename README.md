@@ -74,7 +74,6 @@
 
 <h2>Push With Segue</h2>
 
-     //Push
      - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
      {
           if ([[segue identifier] isEqualToString:@"MySegue"])
