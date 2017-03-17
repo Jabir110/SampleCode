@@ -155,29 +155,62 @@
      
 <h2>pop & Back Button DataPass (StoryBoardID)</h2>
      
-   We can use a delegate to pass the data back to previous Controller.So if You are in your NextViewController and you need to pass the data to VieController than you need to create a protocol that sends data back to your ViewController.Your ViewController  would become a delegate of NextViewController.
-
-Steps:
-
-1. Create a new Xcode Project for (Single View Application).
-2. Give Project a name ( Lets say ProtocolDemo).
-3. Click next button and the Project will be created.
-4. Now go to Your StoryBoard , Click on the View Controller. Then Click on the Xcode options”Editor” and then embed a navigation Controller.  Take a label and a button on the ViewController and make proper connections. Your ViewController.h and ViewController.m will look something like this
+ViewController.h
 
      #import <UIKit/UIKit.h>
      @interface ViewController : UIViewController
+     
      @property (weak, nonatomic) IBOutlet UILabel *outputLabel;
+     - (IBAction)ActionNext:(id)sender;
+     
+     @end
+     
+ViewController.m
+     
+     #import "ViewController.h"
+     #import "SecondViewController.h"
+     @interface ViewController ()
      @end
 
-               -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-          {
-               if ([segue.identifier isEqualToString:@"pushSecond"]) 
-               {
-                    NSIndexPath *indexpath=[tblView indexPathForSelectedRow];
-                    secondVc *ViewSecond=segue.destinationViewController;
-                    ViewSecond.strData=[NSString stringWithFormat:@"%@",[arr objectAtIndex:indexpath.row]];
-               }
-          }
+     @implementation ViewController
+     
+     - (IBAction)ActionNext:(id)sender
+     {
+          SecondViewController *acontollerobject=[self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
+          acontollerobject.delegate=self; // protocol listener
+          [self.navigationController pushViewController:acontollerobject animated:YES];
+     }
+     
+     -(void)sendDataToPreviousController: (NSString *)string
+     {
+          NSLog(@"Fired");
+          self.outputLabel.text = string;
+     }
+     
+SecondViewController.h
+     
+     #import <UIKit/UIKit.h>
 
+     @protocol sendDataBack <NSObject>
+     -(void)sendDataToPreviousController: (NSString *)string;
+     @end
 
+     @interface SecondViewController : UIViewController
+     @property (assign,nonatomic) id delegate;
+     @end
+     
+SecondViewController.m
+
+     #import "SecondViewController.h"
+
+     @interface SecondViewController ()<UITextFieldDelegate>
+     @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+     @end
+
+     @implementation SecondViewController
+
+     -(void)textFieldDidEndEditing:(UITextField *)textField
+     {
+          [_delegate sendDataToPreviousController:textField.text];
+     }
      
