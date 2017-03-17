@@ -1,6 +1,8 @@
 <h2>App Transport Securit</h2>
 
      #import <UIKit/UIKit.h>
+     @interface ViewController : UIViewController
+     @end
      
      <key>NSAppTransportSecurity</key>
         <dict>
@@ -11,12 +13,19 @@
 <h2>NSUserDefault</h2>
 
      #import <UIKit/UIKit.h>
-
-     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-     [defaults setObject:[@"Jabir" forKey:@"strVanue"];
-     [defaults synchronize];
+     @interface ViewController : UIViewController
+     @end
      
-     NSLog(@"strVanue : %@",[defaults valueForKey:@"strVanue"]);
+     – (void)viewDidLoad 
+     {
+          [super viewDidLoad];
+          
+          NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+          [defaults setObject:[@"Jabir" forKey:@"strVanue"];
+          [defaults synchronize];
+          
+          NSLog(@"strVanue : %@",[defaults valueForKey:@"strVanue"]);
+     }
 
 <h2>AlertView</h2>
 
