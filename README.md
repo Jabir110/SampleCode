@@ -23,7 +23,6 @@
      [alert show];
      
      //Index Method
-     
      - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
      {
           if (alertView.tag == 101)
