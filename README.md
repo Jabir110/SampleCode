@@ -20,6 +20,8 @@
 
 <h2>AlertView</h2>
 
+     #import <UIKit/UIKit.h>
+
      //Declare
      
      UIAlertView *alert =  [[UIAlertView alloc]initWithTitle:@"Title" message:@"Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
