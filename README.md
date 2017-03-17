@@ -66,11 +66,32 @@
 <h2>Push & Pop With StoryBoardID</h2>
 
      //Push
-     
      BuyMembershipViewController *push=[self.storyboard instantiateViewControllerWithIdentifier:@"BuyMembershipViewController"];
      [self.navigationController pushViewController:push animated:YES];
      
      //Pop
-     
      [self.navigationController popViewControllerAnimated:YES];
+
+<h2>Push With Segue</h2>
+
+     //Push
+     - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+     {
+          if ([[segue identifier] isEqualToString:@"MySegue"])
+          {
+               // Get destination view
+               SecondViewController *vc = [segue destinationViewController];
+               vc.strPass = [NSString stringWithFormat:@"Jabir"];
+          }
+     }
+     
+     - (IBAction)ActionButton:(id)sender
+     {
+          [self performSegueWithIdentifier:@"MySegue" sender:sender];
+     }
+     
+     
+
+     
+     
 
