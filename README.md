@@ -215,7 +215,7 @@ SecondViewController.m
 }
 ```
 
-<h2>CollectionView Width SET</h2>
+<h2>Date Formetter</h2>
 
 ```objc
 NSDate *date = [NSDate date];
@@ -225,12 +225,12 @@ NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
 [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
 [dateFormatter setDateFormat:@"dd/MM/yyyy"];
 
+//Convert Date to String
 NSString *strDate = [dateFormatter stringFromDate:date];
 NSLog(@"strDate: %@",strDate);
 
+//Convert String to Date
 NSDate *ConvertDate = [dateFormatter dateFromString:strDate];
 NSLog(@"ConvertDate: %@",ConvertDate);
 ```
-
-
-     
+  
