@@ -153,9 +153,9 @@
           [self performSegueWithIdentifier:@"pushSecond" sender:nil];
      }
      
-<h2>pop & Back Button DataPass (StoryBoardID)</h2>
+<h2>Pop & Back Button DataPass (StoryBoardID)</h2>
 
-[Example Link](https://iostpoint.wordpress.com/2016/06/25/pass-data-back-to-previous-viewcontroller/)
+[Example](https://iostpoint.wordpress.com/2016/06/25/pass-data-back-to-previous-viewcontroller/)
 
 ViewController.h
 
