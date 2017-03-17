@@ -194,4 +194,27 @@ SecondViewController.m
     [_delegate sendDataToPreviousController:textField.text];
 }
 ```
+
+<h2>Pop & Back Button DataPass (StoryBoardID)</h2>
+
+```objc
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize returnSize = CGSizeZero;
+    
+    float cellWidth = self.view.frame.size.width/2-15;
+    // float cellhight=self.view.frame.size.width/2-37;
+    float cellhight=205.0f;
+    
+    NSLog(@"cellhight :%f",cellhight);
+    NSLog(@"cellWidth :%f",cellWidth);
+    
+    returnSize = CGSizeMake(cellWidth, cellhight);
+        
+    return returnSize;
+}
+```
+
+
+
      
