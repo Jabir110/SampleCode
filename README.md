@@ -117,4 +117,10 @@ Steps:
 3. Click next button and the Project will be created.
 4. Now go to Your StoryBoard , Click on the View Controller. Then Click on the Xcode options”Editor” and then embed a navigation Controller.  Take a label and a button on the ViewController and make proper connections. Your ViewController.h and ViewController.m will look something like this
 
+     #import <UIKit/UIKit.h>
+     @interface ViewController : UIViewController
+     @property (weak, nonatomic) IBOutlet UILabel *outputLabel;
+     @end
+
+
      
