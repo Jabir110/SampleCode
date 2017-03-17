@@ -1,18 +1,16 @@
 <h2>App Transport Securit</h2>
 
 ```objective-c
-
 <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
     
 ```
 <h2>NSUserDefault</h2>
 
-```objective-c
-
+```objectivec
 #import "ViewController.h"
 @interface ViewController ()
 @end
@@ -27,7 +25,6 @@
     [defaults setObject:@"Jabir" forKey:@"strVanue"];
     [defaults synchronize];
 }
-     
 ```
 
 <h2>AlertView</h2>
