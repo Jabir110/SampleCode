@@ -1,12 +1,11 @@
 <h2>App Transport Securit</h2>
 
 ```objective-c
-
-     <key>NSAppTransportSecurity</key>
-        <dict>
-           <key>NSAllowsArbitraryLoads</key>
-           <true/>
-        </dict>
+          <key>NSAppTransportSecurity</key>
+          <dict>
+               <key>NSAllowsArbitraryLoads</key>
+          <true/>
+          </dict>
 ```
 <h2>NSUserDefault</h2>
 
